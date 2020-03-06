@@ -1,4 +1,11 @@
-TEST_SERVER=root@47.96.23.47
-yarn install
+REGISTRY=registry.aliyuncs.com
+NAMESPACE=vuuvv
+IMAGE=java-node-docker:8.10
+USERNAME=vuuvv@qq.com
+PASSWORD=1111aaaa
 
-ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no ${TEST_SERVER} 'bash -s' < build.sh
+FULL_NAME=${REGISTRY}/${NAMESPACE}/${IMAGE}
+
+docker build . -t ${FULL_NAME}
+docker login ${REGISTRY} -u ${USERNAME} -p ${PASSWORD}
+docker push ${FULL_NAME}
