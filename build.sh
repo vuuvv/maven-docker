@@ -1,6 +1,6 @@
 REGISTRY=registry.aliyuncs.com
 NAMESPACE=vuuvv
-IMAGE=maven-docker:3.5.4-jdk-8-docker-17.06.2-ce
+IMAGE=java-node-docker:8.10
 USERNAME=vuuvv@qq.com
 PASSWORD=1111aaaa
 
